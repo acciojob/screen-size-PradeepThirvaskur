@@ -6,13 +6,19 @@
     <title>Window Size : height and width</title>
 </head>
 <body>
+	<div id="sizeInfo"></div>
+
 
     <script>
-       let h1 = document.createElement("h1");
-    document.body.append(h1);
+    let h1 = document.createElement("h1");
+    let sizeInfo=document.querySelector("#sizeInfo");
+    sizeInfo.append(h1);
+
 
     const screenratio = () => { 
-      h1.innerHTML = "screen Width: " + window.innerWidth + " screen height: " + window.innerHeight;
+        let x=window.innerWidth;
+        let y= window.innerHeight;
+      h1.innerHTML = "Width: " + x + "height: " +y;
     }
     document.addEventListener("DOMContentLoaded", screenratio());
     window.addEventListener("resize", screenratio);
