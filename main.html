@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Window Size : height and width</title>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     const screenratio = () => { 
       h1.innerHTML = "screen Width: " + window.innerWidth + " screen height: " + window.innerHeight;
     }
-
+    document.addEventListener("DOMContentLoaded", screenratio());
     window.addEventListener("resize", screenratio);
     </script>
 </body>
