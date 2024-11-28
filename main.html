@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
+    <script>
+       let h1 = document.createElement("h1");
+    document.body.append(h1);
+
+    const screenratio = () => { 
+      h1.innerHTML = "screen Width: " + window.innerWidth + " screen height: " + window.innerHeight;
+    }
+
+    window.addEventListener("resize", screenratio);
+    </script>
 </body>
-
 </html>
