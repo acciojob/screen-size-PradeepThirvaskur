@@ -8,20 +8,19 @@
 <body>
 	<div id="sizeInfo"></div>
 
-
     <script>
-    let h1 = document.createElement("h1");
-    let sizeInfo=document.querySelector("#sizeInfo");
-    sizeInfo.append(h1);
+        let h1 = document.createElement("h1");
+        let sizeInfo = document.querySelector("#sizeInfo");
+        sizeInfo.append(h1);
 
+        const screenratio = () => { 
+            let x = window.innerWidth;
+            let y = window.innerHeight;
+            h1.innerHTML = "Width: " + x + " Height: " + y;
+        }
 
-    const screenratio = () => { 
-        let x=window.innerWidth;
-        let y= window.innerHeight;
-      h1.innerHTML = "Width: " + x + "height: " +y;
-    }
-    document.addEventListener("DOMContentLoaded", screenratio());
-    window.addEventListener("resize", screenratio);
+        document.addEventListener("DOMContentLoaded", screenratio);
+        window.addEventListener("resize", screenratio);
     </script>
 </body>
 </html>
